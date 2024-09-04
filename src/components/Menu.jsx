@@ -10,15 +10,9 @@ import leaderboardButtonClicked from '/assets/img/Menu/ButtonsClicked/leaderboar
 
 const Menu = () => {
     const navigate = useNavigate();
-    navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
     const location = useLocation();
 
     const handleNavigation = (path) => {
-        if (navigator.vibrate) {
-            navigator.vibrate(100);
-        } else {
-            console.log('Vibration API not supported');
-        }
         navigate(path);
     };
 
